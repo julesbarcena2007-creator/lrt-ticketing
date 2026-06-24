@@ -3,7 +3,7 @@ import { useState } from "react"
 function Destination ({setPage}) {
     const stations = ["Antpolo", "Marikina", "Santolan", "Katipunan", "Anonas", "Cubao", "Betty go", "Gilmore", "J. ruiz", "V. mapa", "Pureza", "Legarda", "Recto"]
     const base = 10
-    const increment = 0.20
+    const increment = 0.30
     const [selectedStation, setSelectedStation] = useState("test"
     )
     function chooseStation (x, index) {
