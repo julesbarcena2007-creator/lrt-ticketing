@@ -1,1 +1,17 @@
 @import "tailwindcss";
+
+.page {
+   @apply min-h-screen text-slate-900 bg-gray-100
+}
+
+.container {
+    @apply text-3xl font-bold text-center pt-10 mt-10 bg-black
+}
+
+.button_1{
+    @apply bg-red-500 text-white font-bold py-2 px-4 rounded hover:bg-red-700
+}
+
+.button_2{
+    @apply bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue-700
+}

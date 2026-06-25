@@ -34,10 +34,15 @@ function App() {
 
 
   return (
-    <div>
-      <button onClick={goToCompute}>Go To Compute</button>
-      <button onClick={goToDestination}>Go To Destination</button>
-      <button onClick={goToWelcome}>Go to Welcome</button>
+    <div className="page">
+      <div className="container">
+        <div>
+          <button onClick={goToCompute} className="button_1">Go To Compute</button>
+        </div>
+        <div> 
+          <button onClick={goToDestination} className="button_2">Go To Destination</button>
+        </div>
+      </div>
 
 
 
