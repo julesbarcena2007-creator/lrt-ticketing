@@ -35,12 +35,32 @@ function App() {
 
   return (
     <div className="page">
+      <div className="header_con">
+        <div className="header">
+          <h1>LOGO</h1>
+          <h1>LRT 2 Ticketing system</h1>
+        </div>
+      </div>
+
+
+
+
+
+
       <div className="container">
         <div>
-          <button onClick={goToCompute} className="button_1">Go To Compute</button>
-        </div>
-        <div> 
-          <button onClick={goToDestination} className="button_2">Go To Destination</button>
+          <div className="pb-10">
+            <div>
+              <p>Mabuhay!</p>
+            </div>
+            <div>
+              <p>Please select a transaction</p>
+            </div>
+           </div> 
+          <div className="button-container">
+            <button onClick={goToCompute} className="button_1">Go To Compute</button>
+            <button onClick={goToDestination} className="button_2">Go To Destination</button>
+          </div>
         </div>
       </div>
 

@@ -5,11 +5,27 @@
 }
 
 .container {
-    @apply text-3xl font-bold text-center pt-10 mt-10 bg-black
+    @apply flex items-center justify-center 
+    text-3xl font-bold text-center p-5 mt-20 bg-blue-100
+    rounded-xl w-fit mx-auto gap-3
+
+}
+
+.header_con {
+  @apply flex justify-start pl-20 pt-10
+}
+
+.header {
+  @apply flex flex-row items-center gap-3
+  text-3xl font-bold p-5 
+}
+
+.button-container {
+    @apply flex gap-4 justify-center 
 }
 
 .button_1{
-    @apply bg-red-500 text-white font-bold py-2 px-4 rounded hover:bg-red-700
+    @apply bg-red-500 text-white font-bold py-2 px-4 rounded hover:bg-red-700 
 }
 
 .button_2{
