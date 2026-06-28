@@ -20,18 +20,35 @@ function Destination ({setPage}) {
         setPage("home")
     }
     return (
-        <div>hello from destination
-            <div>
-                {stations.map((station, index) => {
-                    return <button onClick={() => chooseStation(station,index)}>
-                        {station}
-                    </button>
-                })}
-                
-            </div>
-        <button onClick={goToHome}>Back to home</button>
-        {selectedStation}
+        <div> 
+            <div className="container">
+                <div>   
+                    <div>
+                        <h1>logo</h1>
+                    </div>
 
+                    <div>   
+                        <h1>Please select your origin</h1>
+                    </div>
+                </div>
+            </div>
+
+            <div className="containerStations">  
+                <div>
+                    <div className="stationsContainer">
+                        {stations.map((station, index) => {
+                            return <button onClick={() => chooseStation(station,index)} className="stationButton" key={index}>
+                                {station}
+                            </button>
+                        })}
+                        
+                    </div>
+                <div className="container">       
+                <button onClick={goToHome}>Back to home</button>
+               
+                </div>
+                </div>
+            </div>
         </div>
     )
 }
