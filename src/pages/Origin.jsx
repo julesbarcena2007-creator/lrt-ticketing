@@ -1,7 +1,7 @@
 import { useState } from "react"
 
-function Destination ({setPage}) {
-    const stations = ["Antpolo", "Marikina", "Santolan", "Katipunan", "Anonas", "Cubao", "Betty go", "Gilmore", "J. ruiz", "V. mapa", "Pureza", "Legarda", "Recto"]
+function Origin ({setPage}) {
+    const stations = ["Antipolo", "Marikina", "Santolan", "Katipunan", "Anonas", "Cubao", "Betty go", "Gilmore", "J. ruiz", "V. mapa", "Pureza", "Legarda", "Recto"]
     const base = 10
     const increment = 0.30
     const [selectedStation, setSelectedStation] = useState("test"
@@ -28,7 +28,7 @@ function Destination ({setPage}) {
                     </div>
 
                     <div>   
-                        <h1>Please select your destination</h1>
+                        <h1>Please select your origin</h1>
                     </div>
                 </div>
             </div>
@@ -39,6 +39,7 @@ function Destination ({setPage}) {
                         {stations.map((station, index) => {
                             return <button onClick={() => chooseStation(station,index)} className="stationButton" key={index}>
                                 {station}
+                                
                             </button>
                         })}
                         
@@ -52,4 +53,4 @@ function Destination ({setPage}) {
         </div>
     )
 }
-export default Destination
+export default Origin

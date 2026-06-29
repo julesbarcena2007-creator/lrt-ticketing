@@ -3,6 +3,7 @@ import Button from "./components/Button"
 import Welcome from "./pages/Welcome"
 import Destination from "./pages/Destinations"
 import Compute from "./pages/Compute"
+import Origin from "./pages/Origin"
 
 function App() {
   const [page, setPage] = useState()
@@ -11,6 +12,10 @@ function App() {
     return <Welcome/>
   } 
 
+  if (page == "origin") {
+    return <Origin setPage={setPage}/>
+  }
+
   if (page == "destination")
     return <Destination setPage={setPage}/>
 
@@ -18,8 +23,14 @@ function App() {
     return <Compute payment={payment} name={"jules"}/>
   }
 
+  
+
   function goToCompute () {
     setPage("compute")
+  }
+
+  function goToOrigin () {
+    setPage("origin")
   }
 
   function goToWelcome () {
@@ -58,8 +69,8 @@ function App() {
             </div>
            </div> 
           <div className="button-container">
-            <button onClick={goToCompute} className="button_1">Go To Compute</button>
-            <button onClick={goToDestination} className="button_2">Go To Destination</button>
+            <button onClick={goToCompute} className="button_1">Stored Value</button>
+            <button onClick={goToOrigin} className="button_2">Single Journey</button>
           </div>
         </div>
       </div>
