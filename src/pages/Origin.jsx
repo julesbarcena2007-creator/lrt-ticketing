@@ -4,17 +4,20 @@ function Origin ({setPage}) {
     const stations = ["Antipolo", "Marikina", "Santolan", "Katipunan", "Anonas", "Cubao", "Betty go", "Gilmore", "J. ruiz", "V. mapa", "Pureza", "Legarda", "Recto"]
     const base = 10
     const increment = 0.30
-    const [selectedStation, setSelectedStation] = useState("test"
-    )
+    const [selectedStation, setSelectedStation] = useState()
+
+  
+
     function chooseStation (x, index) {
         setSelectedStation(x)
         console.log(x, index)
-    }
-    function getStation () {
-        
+        localStorage.setItem("selectedStation", x)
+        setPage("destination")
     }
 
-
+    function goToDestination () {
+        setPage("destination")
+    }
 
     function goToHome (){
         setPage("home")
@@ -30,6 +33,8 @@ function Origin ({setPage}) {
                     <div>   
                         <h1>Please select your origin</h1>
                     </div>
+
+                
                 </div>
             </div>
 
@@ -39,6 +44,8 @@ function Origin ({setPage}) {
                         {stations.map((station, index) => {
                             return <button onClick={() => chooseStation(station,index)} className="stationButton" key={index}>
                                 {station}
+                                
+
                                 
                             </button>
                         })}

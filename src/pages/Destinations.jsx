@@ -1,19 +1,18 @@
 import { useState } from "react"
 
-function Destination ({setPage}) {
+function Destination ({setPage, props}) {
     const stations = ["Antpolo", "Marikina", "Santolan", "Katipunan", "Anonas", "Cubao", "Betty go", "Gilmore", "J. ruiz", "V. mapa", "Pureza", "Legarda", "Recto"]
     const base = 10
     const increment = 0.30
     const [selectedStation, setSelectedStation] = useState("test"
     )
+    const origin = localStorage.getItem("selectedStation")
+    
+
     function chooseStation (x, index) {
         setSelectedStation(x)
         console.log(x, index)
     }
-    function getStation () {
-        
-    }
-
 
 
     function goToHome (){
@@ -30,6 +29,11 @@ function Destination ({setPage}) {
                     <div>   
                         <h1>Please select your destination</h1>
                     </div>
+
+                    <div>
+                        <p>Your origin is: {origin}</p>
+                    </div>
+
                 </div>
             </div>
 
